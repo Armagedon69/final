@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: straumann_source
+    database: SNOWFLAKE_LEARNING_DB       # ✅ this must match Snowflake
+    schema: DBT_DTADELE                   # ✅ this must match Snowflake schema
+    tables:
+      - name: STRAUMANN                   # ✅ must match table name exactly (case-sensitive)
+        description: "Raw table loaded from CSV"

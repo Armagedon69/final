@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: genet_source
+    database: SNOWFLAKE_LEARNING_DB  
+    schema: DBT_DTADELE 
+    tables:
+      - name: item
+      - name: oder
+      - name: product
+      - name: seller
+

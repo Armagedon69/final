@@ -1,0 +1,10 @@
+SELECT 
+  ORDERNUMBER,
+  CUSTOMERID,
+  DATE(ORDERDATE) AS Order_date,
+  ORDERQUANTITY
+FROM {{
+    source('straumann_source', 'STRAUMANN')
+}}
+
+WHERE ORDERQUANTITY > 40

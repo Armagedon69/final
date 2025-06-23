@@ -4,4 +4,4 @@ SELECT
     seller_id,
     price,
     freight_value
-  FROM SNOWFLAKE_LEARNING_DB.DBT_DTADELE.ORDER_ITEM
+  FROM {{ source('genet_source', 'item') }}
