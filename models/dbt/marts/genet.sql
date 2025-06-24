@@ -6,7 +6,7 @@
 WITH ITEM AS (
   SELECT *
   FROM {{ 
-           ref("item")
+           ref("stg_item")
   }}
 ),
 
@@ -14,7 +14,7 @@ SELLER AS (
   SELECT *
   FROM 
      {{
-        ref("seller")
+        ref("stg_seller")
      }}
 ),
 
@@ -22,7 +22,7 @@ ORDER_TABLE AS (
   SELECT *
   FROM 
      {{
-        ref("oder")
+        ref("stg_order")
      }}
 ),
 
@@ -30,7 +30,7 @@ PRODUCT AS (
   SELECT *
   FROM 
     {{
-         ref("product")
+         ref("stg_product")
     }}
 ),
 

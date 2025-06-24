@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: genet_source
+    database: SNOWFLAKE_LEARNING_DB  
+    schema: DBT_DTADELE 
+    tables:
+      - name: stg_item
+        description: "Raw table loaded from CSV"
+        identifier: ORDER_ITEM
+      - name: stg_order
+        description: "Raw table loaded from CSV"
+        identifier: ORDERS
+      - name: stg_product
+        description: "Raw table loaded from CSV"
+        identifier: PRODUCTS
+      - name: stg_seller
+        description: "Raw table loaded from CSV"
+        identifier: SELLERS
+

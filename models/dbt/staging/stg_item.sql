@@ -4,4 +4,4 @@ SELECT
     seller_id,
     price,
     freight_value
-  FROM {{ source('genet_source', 'item') }}
+  FROM {{ source('genet_source', 'stg_item') }}
