@@ -8,13 +8,43 @@ sources:
       - name: stg_item
         description: "Raw table loaded from CSV"
         identifier: ORDER_ITEM
+        columns:
+          - name: ORDER_ID
+            tests:
+              - not_null
+              - unique
+              
+
       - name: stg_order
         description: "Raw table loaded from CSV"
         identifier: ORDERS
+        columns:
+          - name: ORDER_ID
+            tests:
+              - not_null
+              - unique
+              
+        
       - name: stg_product
         description: "Raw table loaded from CSV"
         identifier: PRODUCTS
+        columns:
+          - name: PRODUCT_ID
+            tests:
+            - not_null
+            - unique
+            
       - name: stg_seller
         description: "Raw table loaded from CSV"
         identifier: SELLERS
+        freshness: 
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 1, period: day}
+        loaded_at_field: LOADED_AT
+        columns:
+          - name: SELLER_ID
+            tests:
+            - unique
+            - not_null
+            
 
