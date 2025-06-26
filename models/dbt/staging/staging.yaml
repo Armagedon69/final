@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: stg_order
+    description: one distinct order per row
     columns:
       - name: ORDER_ID
+        description: each order_id is uniquee
         tests:
           - not_null
           - unique
@@ -11,6 +13,7 @@ models:
   - name: stg_item
     columns:
       - name: ORDER_ID
+        description: "{{ doc('order_status')}}" ### for learning purpose only
         tests:
           - not_null
           - unique
