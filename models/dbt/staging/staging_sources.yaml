@@ -5,7 +5,7 @@ sources:
     database: SNOWFLAKE_LEARNING_DB  
     schema: DBT_DTADELE 
     tables:
-      - name: stg_item
+      - name: order_item
         description: "Raw table loaded from CSV"
         identifier: ORDER_ITEM
         columns:
@@ -15,7 +15,7 @@ sources:
               - unique
               
 
-      - name: stg_order
+      - name: orders
         description: "Raw table loaded from CSV"
         identifier: ORDERS
         columns:
@@ -25,7 +25,7 @@ sources:
               - unique
               
         
-      - name: stg_product
+      - name: products
         description: "Raw table loaded from CSV"
         identifier: PRODUCTS
         columns:
@@ -34,7 +34,7 @@ sources:
             - not_null
             - unique
             
-      - name: stg_seller
+      - name: sellers
         description: "Raw table loaded from CSV"
         identifier: SELLERS
         freshness: 

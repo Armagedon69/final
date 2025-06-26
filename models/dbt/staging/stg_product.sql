@@ -1,4 +1,4 @@
 SELECT
     product_id,
     product_category_name
-  FROM {{ source('genet_source', 'stg_product') }}
+  FROM {{ source('genet_source', 'products') }}
