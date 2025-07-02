@@ -2,17 +2,18 @@ version: 2
 
 sources:
   - name: pharma
-    description: "{{ doc('drugs_classification _system')}}"
+    description: "{{ doc('drugs_classification_system')}}"
     database: ANALYTICS
     schema: ROW_DATA
     tables:
       - name: stg_daily
         description: 'Raw table loaded from CSV'
         identifier: SALES_DAILY
-        freshness: 
+        config:
+         freshness: 
             warn_after: {count: 24, period: hour}
             error_after: {count: 1, period: day}
-        loaded_at_field: LOADED_AT_TIMESTAMP
+         loaded_at_field: LOADED_AT_TIMESTAMP
       - name: stg_hourly
         description: 'Raw table loaded from CSV'
         identifier: SALES_HOURLY

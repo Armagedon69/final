@@ -1,5 +1,5 @@
 
-{% docs drugs_classification _system %}
+{% docs drugs_classification_system %}
 
 
 | status         | definition                                                                                                      |
