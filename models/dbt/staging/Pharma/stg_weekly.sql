@@ -1,2 +1,2 @@
 SELECT *
-FROM ANALYTICS.ROW_DATA.SALES_WEEKLY
+FROM {{ source('pharma', 'stg_weekly') }}

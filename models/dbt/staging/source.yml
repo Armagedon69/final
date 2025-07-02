@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: pharma
+    database: ANALYTICS
+    schema: ROW_DATA
+    tables:
+      - name: stg_daily
+        description: 'Raw table loaded from CSV'
+        identifier: SALES_DAILY
+      - name: stg_hourly
+        description: 'Raw table loaded from CSV'
+        identifier: SALES_HOURLY
+      - name: stg_monthly
+        description: 'Raw table loaded from CSV'
+        identifier: SALES_MONTHLY
+      - name: stg_weekly
+        description: 'Raw table loaded from CSV'
+        identifier: SALES_WEEKLY

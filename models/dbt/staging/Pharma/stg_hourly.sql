@@ -1,2 +1,2 @@
 SELECT *
-FROM ANALYTICS.ROW_DATA.SALES_HOURLY
+FROM {{ source('pharma', 'stg_hourly') }}
