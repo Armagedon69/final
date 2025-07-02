@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 WITH PHARMA_DATA AS(
   SELECT *
   FROM {{ ref('stg_daily') }}
