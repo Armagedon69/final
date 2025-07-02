@@ -1,0 +1,16 @@
+version: 2
+
+
+models:
+  - name: stg_daily
+    description: 'Daily sales activity'
+    columns:
+      - name: DATUM
+        tests:
+          - not_null
+
+  
+          
+      
+        
+     

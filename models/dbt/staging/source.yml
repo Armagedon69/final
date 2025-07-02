@@ -2,12 +2,17 @@ version: 2
 
 sources:
   - name: pharma
+    description: "{{ doc('drugs_classification _system')}}"
     database: ANALYTICS
     schema: ROW_DATA
     tables:
       - name: stg_daily
         description: 'Raw table loaded from CSV'
         identifier: SALES_DAILY
+        freshness: 
+            warn_after: {count: 24, period: hour}
+            error_after: {count: 1, period: day}
+        loaded_at_field: LOADED_AT_TIMESTAMP
       - name: stg_hourly
         description: 'Raw table loaded from CSV'
         identifier: SALES_HOURLY
@@ -17,3 +22,8 @@ sources:
       - name: stg_weekly
         description: 'Raw table loaded from CSV'
         identifier: SALES_WEEKLY
+        columns:
+          - name: M01AB
+            description: "Drug type"
+            tests:
+                - not_null
